@@ -49,12 +49,20 @@
 
 // console.log(`${n1}${operator}${n2}= ${compute(n1, n2, operator)}`);
 
+// const fakto = (n) => {
+//   let f = 1;
+//   for (let i = n; i > 1; i--) {
+//     f = f * i;
+//   }
+//   return f;
+// };
+
 const fakto = (n) => {
-  let f = 1;
-  for (let i = n; i > 1; i--) {
-    f = f * i;
+  if (n <= 1) {
+    return 1;
+  } else {
+    return n * fakto(n - 1);
   }
-  return f;
 };
 
 const number = +prompt("n:");
